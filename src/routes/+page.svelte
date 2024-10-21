@@ -1,15 +1,85 @@
-<!-- YOU CAN DELETE EVERYTHING IN THIS PAGE -->
 
-<div class="container h-full mx-auto flex justify-center items-center">
-	<div class="space-y-5">
-		<h1 class="h1">Let's get cracking bones!</h1>
-		<p>Start by exploring:</p>
-		<ul>
-			<li><code class="code">/src/routes/+layout.svelte</code> - barebones layout</li>
-			<li><code class="code">/src/app.postcss</code> - app wide css</li>
-			<li>
-				<code class="code">/src/routes/+page.svelte</code> - this page, you can replace the contents
-			</li>
-		</ul>
+<!--Delar upp sidan i två delar-->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#baff5c" fill-opacity="1" d="M0,288L16,256C32,224,64,160,96,112C128,64,160,32,192,64C224,96,256,192,288,229.3C320,267,352,245,384,229.3C416,213,448,203,480,192C512,181,544,171,576,186.7C608,203,640,245,672,229.3C704,213,736,139,768,117.3C800,96,832,128,864,154.7C896,181,928,203,960,213.3C992,224,1024,224,1056,234.7C1088,245,1120,267,1152,277.3C1184,288,1216,288,1248,266.7C1280,245,1312,203,1344,197.3C1376,192,1408,224,1424,240L1440,256L1440,0L1424,0C1408,0,1376,0,1344,0C1312,0,1280,0,1248,0C1216,0,1184,0,1152,0C1120,0,1088,0,1056,0C1024,0,992,0,960,0C928,0,896,0,864,0C832,0,800,0,768,0C736,0,704,0,672,0C640,0,608,0,576,0C544,0,512,0,480,0C448,0,416,0,384,0C352,0,320,0,288,0C256,0,224,0,192,0C160,0,128,0,96,0C64,0,32,0,16,0L0,0Z"></path></svg>
+<main>
+	<div>
+  
+	  <h1 class="name"> Iris Sundström </h1>
+	  <h2>Här har jag samlat min uppgifter jag gjort i samband med webbutveckling i årskurs 2 på Maja Beskowgymnasiet!
+	  </h2>
+	  <h3>Inspirerade citat för min webbutvecklingsresa:</h3>
+	  <p id="inspo">
+		"The only way to learn a new programming language is by writing programs in it." - <strong>Dennis Ritchie</strong>, creator of the C programming language.
+	  </p>
+
+	  <p style="background-color:#ae32a3">
+		"Every great developer you know got there by solving problems they were unqualified to solve until they actually did it." - <span>Patrick McKenzie, software engineer and entrepreneur</span>.
+	  </p>
+	  <!--Under denna kommer vi lägga till fler element-->
+  
 	</div>
-</div>
+	  <!--Här kommer vi lägga till en bild senare i uppgiften 1.2.4 Extra styling-->  
+		
+	  <svg viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg">
+		<path fill="#d8ff5c" d="M29.5,-44C37.1,-41,41.4,-30.9,43.5,-21.3C45.7,-11.7,45.8,-2.5,46.6,8.2C47.5,19,49.1,31.5,43.9,38.7C38.7,45.9,26.6,47.8,14.3,53.8C1.9,59.9,-10.8,70,-18.4,66.2C-26,62.4,-28.6,44.7,-40.2,33.5C-51.8,22.4,-72.5,17.9,-75.7,9.6C-78.8,1.3,-64.3,-10.7,-56.1,-24.3C-47.8,-37.9,-45.8,-53,-37.5,-55.7C-29.2,-58.3,-14.6,-48.4,-1.8,-45.6C10.9,-42.7,21.9,-46.9,29.5,-44Z" transform=" translate(100,70)"  />
+	  </svg>
+
+	  
+  </main>
+
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#fffd5c" fill-opacity="1" d="M0,192L12.6,186.7C25.3,181,51,171,76,138.7C101.1,107,126,53,152,48C176.8,43,202,85,227,122.7C252.6,160,278,192,303,213.3C328.4,235,354,245,379,224C404.2,203,429,149,455,154.7C480,160,505,224,531,224C555.8,224,581,160,606,128C631.6,96,657,96,682,117.3C707.4,139,733,181,758,186.7C783.2,192,808,160,834,160C858.9,160,884,192,909,192C934.7,192,960,160,985,165.3C1010.5,171,1036,213,1061,234.7C1086.3,256,1112,256,1137,218.7C1162.1,181,1187,107,1213,112C1237.9,117,1263,203,1288,218.7C1313.7,235,1339,181,1364,138.7C1389.5,96,1415,64,1427,48L1440,32L1440,320L1427.4,320C1414.7,320,1389,320,1364,320C1338.9,320,1314,320,1288,320C1263.2,320,1238,320,1213,320C1187.4,320,1162,320,1137,320C1111.6,320,1086,320,1061,320C1035.8,320,1011,320,985,320C960,320,935,320,909,320C884.2,320,859,320,834,320C808.4,320,783,320,758,320C732.6,320,707,320,682,320C656.8,320,632,320,606,320C581.1,320,556,320,531,320C505.3,320,480,320,455,320C429.5,320,404,320,379,320C353.7,320,328,320,303,320C277.9,320,253,320,227,320C202.1,320,177,320,152,320C126.3,320,101,320,76,320C50.5,320,25,320,13,320L0,320Z"></path></svg>
+
+
+  <style>
+	main{
+	  /*Styling för att dela upp sidan i två delar. */
+	  /*Vi kommer gå igenom detta i detalj senare*/
+	  margin: auto;
+	  width: 80vw;
+	  height: 70vh;
+	  display: grid;
+	  grid-template-columns: repeat(2,50%);
+	  overflow: hidden;
+	}
+	div{
+	  /*Styling för att centrera texten i behållaren*/
+	  margin: auto;
+	}
+	
+	h1{
+    color:violet;
+	background-color: lightblue;
+	}
+	h2{
+    color: rgb(100, 227, 255);
+	
+	}
+	h3{
+    color: #a3f650;
+    font-family: sans-serif;
+    font-weight: bold;
+	}
+	.name{
+    font-family:'Gill Sans';
+    font-size: 50px;
+	border: 1px solid black;
+    padding: 10px;
+	}
+	#inspo{
+    font-family: courier;
+    font-size: 160%;
+	}
+
+	span{
+    color: #4ef14e;
+	}
+	
+  /* Vi skiljer elementen med ett kommatecken(,) för att ge möjligheten till att ge flera element samma styling*/
+	h1, h2, h3, p {
+    display: inline-block;
+    /*Ger utrymme mellan element*/
+    margin: 10px;
+    }
+        
+	</style>
+  
