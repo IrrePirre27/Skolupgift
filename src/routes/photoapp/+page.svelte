@@ -1,7 +1,7 @@
 <script>
-    let image = "https://picsum.photos/id/70/367/267"
-    let photo = "https://picsum.photos/id/88/367/267"
-    let picture = "https://picsum.photos/id/93/367/267"
+    let image = "får 3.jpg"
+    let photo = "får 6.png"
+    let picture = "får5.webp"
 </script>
 
 <main>
@@ -11,13 +11,13 @@
 
 <div class="photos">
     <div class="image-wrapper">
-        <img src={image} alt="träd längst en väg">
+        <img src={image} alt="ett får">
     </div>
     <div class="image-wrapper">
-        <img src={photo} alt="svart vit bild på trafik">
+        <img src={photo} alt="ett anat får">
     </div>
     <div class="image-wrapper">
-        <img src={picture} alt="en myr">
+        <img src={picture} alt="ett tredje får">
     </div>
 </div>
 
