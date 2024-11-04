@@ -11,13 +11,13 @@
 
 <div class="photos">
     <div class="image-wrapper">
-        <img src={image} alt="ett får">
+        <img src={image} alt="ett Får">
     </div>
     <div class="image-wrapper">
-        <img src={photo} alt="ett anat får">
+        <img src={photo} alt="ett anat Får">
     </div>
     <div class="image-wrapper">
-        <img src={picture} alt="ett tredje får">
+        <img src={picture} alt="ett tredje Får">
     </div>
 </div>
 
