@@ -30,6 +30,7 @@
 	<a href="{base}/register">Register</a>
 	<a href="{base}/login">Login</a>
 	<a href="{base}/shoppinglist">Shoppinglist</a>
+	<a href="{base}/Memory">Memory</a>
 </nav>
 
 <style>
