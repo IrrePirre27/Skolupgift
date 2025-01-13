@@ -26,11 +26,12 @@
 
 <nav>
 	<a href="{base}/">Hem</a>
-	<a href="{base}/photoapp">Photo App</a>
+	<a href="{base}/photoapp">PhotoApp</a>
 	<a href="{base}/register">Register</a>
 	<a href="{base}/login">Login</a>
 	<a href="{base}/shoppinglist">Shoppinglist</a>
 	<a href="{base}/Memory">Memory</a>
+	<a href="{base}/chat">Chat</a>
 </nav>
 
 <style>

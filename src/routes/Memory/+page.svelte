@@ -1,7 +1,7 @@
 <script>
 
 let image = "Gräss.jpg"
-let potho = ["får 3.jpg", "får4.webp", "får5.webp", "får 6.png", "får 7.jpg", "får 8.jpg"]
+let potho = ["får 3.jpg", "får4.jpg", "får5.jpg", "får 6.png", "får 7.jpg", "får 8.jpg"]
 let cards = []
 for (let index = 0; index < 12; index++) {
     cards=[... cards, {image:potho[index%6],flipped:false,matched:false}]

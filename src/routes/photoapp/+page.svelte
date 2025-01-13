@@ -1,7 +1,7 @@
 <script>
     let image = "får 3.jpg"
     let photo = "får 6.png"
-    let picture = "får5.webp"
+    let picture = "får5.jpg"
 </script>
 
 <main>
