@@ -33,6 +33,8 @@
 	<a href="{base}/Memory">Memory</a>
 	<a href="{base}/chat">Chat</a>
 	<a href="{base}/search">Search</a>
+	<a href="{base}/cups">CupGame</a>
+	<a href="{base}/maze">Maze</a>
 </nav>
 
 <style>
