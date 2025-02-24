@@ -38,12 +38,12 @@
 </script>
 
 <div class = "toppen">
-    <div class="ej_namn">Home</div>
-    <div class="ej_namn">Dealls</div>
-    <div class="ej_namn"> Membership</div>
-    <div class = "namn"> Sapling Superstore</div>
-    <div class="ej_namn">Merch</div>
-    <div class="ej_namn">Info</div>
+    <div class="ej_namn"><p class="ej-viktig">Home</p></div>
+    <div class="ej_namn"><p>Dealls</p></div>
+    <div class="ej_namn"> <p>Membership</p></div>
+    <div class = "namn"> <h1 class = "titel">Sapling Superstore</h1></div>
+    <div class="ej_namn"><p>Merch</p></div>
+    <div class="ej_namn"><p>Info</p></div>
     <div class="ej_namn" ><button class = "knap" on:click={se_vagn}>Cart</button></div>
 </div>
 
@@ -101,6 +101,9 @@
         border-color: #FFFFFF;
         border-width: 2px;
         padding: 3px;
+    }
+    .titel{
+
     }
     main{
         display:flex;
