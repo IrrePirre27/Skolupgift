@@ -35,6 +35,7 @@
 	<a href="{base}/search">Search</a>
 	<a href="{base}/cups">CupGame</a>
 	<a href="{base}/maze">Maze</a>
+	<a href="{base}/shop">Shop</a>
 </nav>
 
 <style>

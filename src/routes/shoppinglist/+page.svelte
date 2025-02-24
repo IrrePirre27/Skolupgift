@@ -1,5 +1,5 @@
 <script>
-    let varan = " "
+    let varan = " " 
     import { base } from '$app/paths';
     
     let varor = [{name:"Skinka", status:"köpt"}, {name:"Annanas", status:"köpt"}, {name:"Svamp", status:"köpt"}, {name:"Tomatsås", status:"köpt"}, {name:"Ägg", status:"oköpt"}]
