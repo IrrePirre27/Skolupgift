@@ -119,8 +119,8 @@
         border-color: #FFFFFF;
         border-width: 2px;
         margin: 10px;
-        max-height: 300px;
-        max-width: 300px;
+        height: 300px;
+        width: 300px;
         background-color: #4a2b08c3;
         display: flex;
         flex-direction:column;
