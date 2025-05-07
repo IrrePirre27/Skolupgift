@@ -70,8 +70,8 @@
     }
 </script>
 
-<div class="backdrop">
-</div>
+<div class="backdrop"></div>
+
 <main>
     <div  class = "fylli_svar", class:klar ={ord_kvar}> 
         <button class = "knap" on:click={()=>selected()}><div class="choose" class:merkt={use_glossor[ord].vald}></div></button>
@@ -96,6 +96,8 @@
         <p>Inga märkta ord</p>
     </div>
 </main>
+
+<aside class="egna"></aside>
 
 <style>
     *{
@@ -169,7 +171,15 @@
     .ta_lungt{
         display:none;
     }
-
+    .egna{
+        border-width: 3px;
+        border-color: black;
+        border-radius: 50%;
+        height: 6vh;
+        width: 6vh;
+        background-color: rgb(32, 32, 32);
+        margin: 10px;
+    }
     .backdrop{
         width: 100vw;
         height: 100vh;
