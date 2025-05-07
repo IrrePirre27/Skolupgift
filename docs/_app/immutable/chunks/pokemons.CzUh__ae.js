@@ -1,1 +1,0 @@
-import{w as e}from"./index.miOlO_99.js";const s=(window==null?void 0:window.localStorage.getItem("pokemons"))??"",t=e(s);t.subscribe(o=>{window==null||window.localStorage.setItem("pokemons",o)});export{t as p};
