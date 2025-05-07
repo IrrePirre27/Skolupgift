@@ -20,6 +20,12 @@ export default {
 						enhancements: true,
 					},
 				],
+				extend: {
+					/* Maybe you have other configs */
+					fontFamily: {
+						OpenDyslexic: ['OpenDyslexic']
+					}
+				}
 			},
 		}),
 	],

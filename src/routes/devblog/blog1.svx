@@ -1,0 +1,10 @@
+---
+title: "Blog1"
+date: "2025-04-09"
+---
+ Jag har mest jobat på gamla skare jag inte gjort i dag.
+ Det jag har gort på min hemsida är stt man får en random glosa, efter tre fel försök visas rätt svar, 
+ när man gissar fle bikar texter rött när man skriver rätt blir texten grön.
+ Har även kronglat en del med att få till så att jag har en anna font än den som används atomtisk.
+
+ 

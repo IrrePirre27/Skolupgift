@@ -130,9 +130,6 @@
         max-height: 30vh;
         max-width: 10vw;
     }
-    .se{
-        display:none;
-    }
     .kundvagn{
         position: fixed;
         display: flex;

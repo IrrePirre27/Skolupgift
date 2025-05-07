@@ -2,7 +2,7 @@
     let varan = " " 
     import { base } from '$app/paths';
     
-    let varor = [{name:"Skinka", status:"köpt"}, {name:"Annanas", status:"köpt"}, {name:"Svamp", status:"köpt"}, {name:"Tomatsås", status:"köpt"}, {name:"Ägg", status:"oköpt"}]
+    let varor = [{name:"Skinka", status:"köpt", prioritet:0}, {name:"Annanas", status:"köpt", prioritet:0}, {name:"Svamp", status:"köpt", prioritet:0}, {name:"Tomatsås", status:"köpt", prioritet:0}, {name:"Ägg", status:"oköpt", prioritet:0}]
     
     
     function handleSubmit(params){
@@ -27,6 +27,7 @@
     function changeit(index){
         varor[index].status = "oköpt"
     }
+    
 </script>
 
 <main class="container">
@@ -41,8 +42,8 @@
             <ul>
                 {#each varor as vara,i}
                     {#if vara.status=="oköpt"}
-                            <li>
-                            {vara.name}<button class = "knap" on:click={()=>remove(i)}>X</button> <button class = "byt" on:click={()=>change(i)}>O</button>
+                        <li>
+                            {vara.name}<button class = "knap" on:click={()=>remove(i)}>X</button> <button class = "byt" on:click={()=>change(i)}>O</button> <input type="number" id="priority" class="pri" bind:value={varan.prioritet}>
                         </li>
                     {/if}
                 
@@ -59,7 +60,7 @@
                         <li>
                             {vara.name}<button class = "knap" on:click={()=>remove(i)}>X</button> <button class = "byt" on:click={()=>changeit(i)}>O</button>
                         </li>
-                        {/if}
+                    {/if}
                 {/each}
             </ul>
         </section>
@@ -119,6 +120,12 @@
     }
     form{
         color: black;
+    }
+    .pri{
+        height: 15px;
+        width: 55px;
+        color: black;
+        font-size: 90%;
     }
     .knap{
         color: red;
