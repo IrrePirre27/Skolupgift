@@ -1,5 +1,7 @@
 <script>
-        import { enhance } from "$app/forms";
+    import { enhance } from "$app/forms";
+    import { base } from '$app/paths';
+	import { onMount } from "svelte";
 
     let glossor = [{Svenska:"Hej", Engelska: "Hello", vald:false},{Svenska:"Nej", Engelska: "No", vald:false},{Svenska:"Ja", Engelska: "Yes",vald:false}]
     let use_glossor = [...glossor]
@@ -15,6 +17,15 @@
     let ord_kvar = false
     let fira = true
     let wait = true
+
+    let egna_glossset = []
+
+    onMount(()=>{
+        egna_glossor = localStorage.getItem("egna_glossor") 
+        if(egna_glossor.length > 0){
+            egna_glossset = [...egna_glossset, JSON.parse(egna_glossor)]
+        }
+    })
 
     function handleSubmit(params){
         if (tries === 2){
@@ -73,6 +84,13 @@
 <div class="backdrop"></div>
 
 <main>
+    <a href="{base}/add_glossor">
+        <aside class="egna">
+            <div class = "line"></div>
+            <div class = "line"></div>
+            <div class = "line"></div>
+        </aside> 
+    </a>
     <div  class = "fylli_svar", class:klar ={ord_kvar}> 
         <button class = "knap" on:click={()=>selected()}><div class="choose" class:merkt={use_glossor[ord].vald}></div></button>
         <div class= "svar">
@@ -95,13 +113,23 @@
     <div class = "No_words", class:ta_lungt = {wait}>
         <p>Inga märkta ord</p>
     </div>
+    <div>
+        {#each u as gup,i}
+            <div> Glosor{i+1} </div>
+        {/each}
+    </div>
 </main>
 
-<aside class="egna"></aside>
+
 
 <style>
     *{
     font-family: 'Open-Dyslexic';
+    }
+    main{
+        height: 100vh;
+        width: 100vw;
+        display: flex;
     }
     .fylli_svar{
         height: 100vh;
@@ -174,11 +202,16 @@
     .egna{
         border-width: 3px;
         border-color: black;
-        border-radius: 50%;
         height: 6vh;
         width: 6vh;
         background-color: rgb(32, 32, 32);
         margin: 10px;
+    }
+    .line{
+        width: 2vw;
+        height: 4px;
+        background-color: black;
+        margin: 8px;
     }
     .backdrop{
         width: 100vw;

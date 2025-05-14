@@ -1,0 +1,8 @@
+---
+title: "Blog3"
+date: "2025-05-14"
+---
+Jag har jobat vidare med möjlighetaen att jobba med egan glosor, Man kan göra egna "sett" med glosor.
+Man skriver in glosorna som hör i hopp, svenska och engelska ordet tillsamns. För att sedan lägga till dem i enlista på sidan a skärmen.
+När man har alla glossom man vill kan man seda trycka på en knap för att sspara dem till local sorage. 
+Det jag försöker jobba med nu är man ska kuna välja vilket av sina egetillagda glos sätt man kan göra.

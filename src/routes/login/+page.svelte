@@ -3,7 +3,7 @@
     let kod= ""
     
     import { base } from '$app/paths';
-    import {users_store} from "$lib/user";
+    import {users_store} from "$lib/user"; 
     let users = [];
     
     import { onMount } from 'svelte';
