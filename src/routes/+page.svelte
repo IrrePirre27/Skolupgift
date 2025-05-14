@@ -114,7 +114,7 @@
         <p>Inga märkta ord</p>
     </div>
     <div>
-        {#each u as gup,i}
+        {#each egna_glossset as gup,i}
             <div> Glosor{i+1} </div>
         {/each}
     </div>

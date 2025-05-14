@@ -1,0 +1,4 @@
+import{s as o,n as t}from"./scheduler.BtuXK2ET.js";import{S as r,i,e as m,c as g,k as d,g as p,d as c}from"./index.EH5hNRaW.js";function k(s){let a,n=`Jag har jobat vidare med möjlighetaen att jobba med egan glosor, Man kan göra egna “sett” med glosor.
+Man skriver in glosorna som hör i hopp, svenska och engelska ordet tillsamns. För att sedan lägga till dem i enlista på sidan a skärmen.
+När man har alla glossom man vill kan man seda trycka på en knap för att sspara dem till local sorage.
+Det jag försöker jobba med nu är man ska kuna välja vilket av sina egetillagda glos sätt man kan göra.`;return{c(){a=m("p"),a.textContent=n},l(e){a=g(e,"P",{"data-svelte-h":!0}),d(a)!=="svelte-19xo0ze"&&(a.textContent=n)},m(e,l){p(e,a,l)},p:t,i:t,o:t,d(e){e&&c(a)}}}const h={title:"Blog3",date:"2025-05-14"};class u extends r{constructor(a){super(),i(this,a,null,k,o,{})}}export{u as default,h as metadata};
