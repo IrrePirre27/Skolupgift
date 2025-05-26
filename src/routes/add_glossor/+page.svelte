@@ -1,32 +1,30 @@
 <script>
     import { base } from '$app/paths';
     import { enhance } from "$app/forms";
+	import { onMount } from "svelte";
 
     let Ord_Engelska = ""
     let Ord_Svenska = ""
     let nya_glossor = []
     let egna_glosor = []
-
     /**
     * @param minLength 
     * @param string 
     * @returns 
     */
 
-
-    export const isStringInValid = (string, minLength) => {
-        return !string || !string?.trim() || !/^[a-zA-Z ]+$/.test(string) || string.length < minLength
-    }
+    onMount(()=>{
+        let egna_glossor = localStorage.getItem("egna_glossor") 
+        if(egna_glossor.length > 0){
+            egna_glosor =  JSON.parse(egna_glossor)
+        }
+        
+    })
 
     function handleSubmit(params) {
-        if(isStringInValid(Ord_Svenska+Ord_Engelska)){alert("Du behöver ej siffror")
-        }
-        else{
             let nytt_ord = {Svenska:Ord_Svenska, Engelska:Ord_Engelska, vald:false}
             nya_glossor =[...nya_glossor,nytt_ord]
             console.log("detta görs");
-            
-        }
     }
     function nytSett(params) {
         console.log("vi tar oss hit");
@@ -37,6 +35,8 @@
             nya_glossor = []
         }
     }
+
+    
 </script>
 
 <div class = "bakrund"></div>

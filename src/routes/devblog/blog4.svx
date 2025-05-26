@@ -1,0 +1,7 @@
+---
+title: "Blog4"
+date: "2025-05-26"
+---
+Det senaste jag har gjort är att man gloss sätten som man har sparat i lockal sotragche hämtas från lokaltragch när sidan laddas in
+sedan lägs de till i en lista som visas på skärmen. När man sedan killkar på listan, sätt den in i en aktiv lista så det är det 
+som används i rästen av koden.

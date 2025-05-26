@@ -1,0 +1,3 @@
+import{s as o,n as a}from"./scheduler.BtuXK2ET.js";import{S as r,i,e as d,c as m,k as c,g as p,d as g}from"./index.EH5hNRaW.js";function f(n){let t,s=`Det senaste jag har gjort är att man gloss sätten som man har sparat i lockal sotragche hämtas från lokaltragch när sidan laddas in
+sedan lägs de till i en lista som visas på skärmen. När man sedan killkar på listan, sätt den in i en aktiv lista så det är det
+som används i rästen av koden.`;return{c(){t=d("p"),t.textContent=s},l(e){t=m(e,"P",{"data-svelte-h":!0}),c(t)!=="svelte-d0f7lx"&&(t.textContent=s)},m(e,l){p(e,t,l)},p:a,i:a,o:a,d(e){e&&g(t)}}}const u={title:"Blog4",date:"2025-05-26"};class v extends r{constructor(t){super(),i(this,t,null,f,o,{})}}export{v as default,u as metadata};

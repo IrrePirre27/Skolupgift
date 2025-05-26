@@ -3,8 +3,9 @@
     import { base } from '$app/paths';
 	import { onMount } from "svelte";
 
-    let glossor = [{Svenska:"Hej", Engelska: "Hello", vald:false},{Svenska:"Nej", Engelska: "No", vald:false},{Svenska:"Ja", Engelska: "Yes",vald:false}]
-    let use_glossor = [...glossor]
+    let default_glossor = [{Svenska:"Hej", Engelska: "Hello", vald:false},{Svenska:"Nej", Engelska: "No", vald:false},{Svenska:"Ja", Engelska: "Yes",vald:false}]
+    let aktiv_glossor = [...default_glossor]
+    let use_glossor = [...aktiv_glossor]
     let valda_glossor = []
     let ord = Math.round(Math.random()*(use_glossor.length-1))
     let tries = 0
@@ -19,12 +20,15 @@
     let wait = true
 
     let egna_glossset = []
+    let vilket_sett = "default"
 
     onMount(()=>{
-        egna_glossor = localStorage.getItem("egna_glossor") 
+        let egna_glossor = localStorage.getItem("egna_glossor") 
         if(egna_glossor.length > 0){
-            egna_glossset = [...egna_glossset, JSON.parse(egna_glossor)]
+            egna_glossset = JSON.parse(egna_glossor)
         }
+        console.log(egna_glossset);
+        
     })
 
     function handleSubmit(params){
@@ -55,7 +59,7 @@
         ord_kvar = false
         fira = true
         console.log("detta händer");
-        use_glossor = [...glossor]
+        use_glossor = [...aktiv_glossor]
     }
     function igen_markerad() {
         if (valda_glossor.length > 0){
@@ -79,43 +83,56 @@
         else
             valda_glossor = valda_glossor.filter(glossa =>glossa!= use_glossor[ord])
     }
+    
+    function choose_sett(i) {
+        console.log("knappen fungerar");
+        use_glossor = [...egna_glossset[i]]
+        aktiv_glossor = [...egna_glossset[i]]
+        vilket_sett = i + 1
+    }
 </script>
 
 <div class="backdrop"></div>
 
 <main>
-    <a href="{base}/add_glossor">
-        <aside class="egna">
-            <div class = "line"></div>
-            <div class = "line"></div>
-            <div class = "line"></div>
-        </aside> 
-    </a>
-    <div  class = "fylli_svar", class:klar ={ord_kvar}> 
-        <button class = "knap" on:click={()=>selected()}><div class="choose" class:merkt={use_glossor[ord].vald}></div></button>
-        <div class= "svar">
-            <form  method="post"
-            use:enhance={({ formElement, formData, action, cancel }) => {
-            cancel(); //don't post anything to server
-            formElement.reset()
-            handleSubmit()}}>
-                <label class:gren ={right} class:red = {wrong} for="Glosor">{use_glossor[ord].Svenska}</label>
-                    <input  class = "fyll_i" type="text" id="glosor" required placeholder ="Aa" bind:value={svar} autocomplete="off">
-            </form>
-            <p class:help={visa_svar}> Rätt svar: {use_glossor[ord].Engelska} </p>
+    <div class="eget">
+        <a href="{base}/add_glossor">
+            <aside class="egna">
+                <div class = "line"></div>
+                <div class = "line"></div>
+                <div class = "line"></div>
+            </aside> 
+        </a>
+    </div>
+    <div class = "glossor">
+        <h1>Glosor{"\t" + vilket_sett}</h1>
+        <div  class = "fylli_svar", class:klar ={ord_kvar}> 
+            <button class = "knap" on:click={()=>selected()}><div class="choose" class:merkt={use_glossor[ord].vald}></div></button>
+            <div class= "svar">
+                <form  method="post"
+                use:enhance={({ formElement, formData, action, cancel }) => {
+                cancel(); //don't post anything to server
+                formElement.reset()
+                handleSubmit()}}>
+                    <label class:gren ={right} class:red = {wrong} for="Glosor">{use_glossor[ord].Svenska}</label>
+                        <input  class = "fyll_i" type="text" id="glosor" required placeholder ="Aa" bind:value={svar} autocomplete="off">
+                </form>
+                <p class:help={visa_svar}> Rätt svar: {use_glossor[ord].Engelska} </p>
+            </div>
+        </div>
+        
+        <div class = "done", class:klart={fira}>
+            <p>Du har stavt alla ord rätt</p>
+            <button class = "knap" on:click={()=>igen_alla()}>Starta Om - Alla Ord</button>
+            <button class = "knap" on:click={()=>igen_markerad()}>Starta Om - Märkta Ord</button>
+        </div>
+        <div class = "No_words", class:ta_lungt = {wait}>
+            <p>Inga märkta ord</p>
         </div>
     </div>
-    <div class = "done", class:klart={fira}>
-        <p>Du har stavt alla ord rätt</p>
-        <button class = "knap" on:click={()=>igen_alla()}>Starta Om - Alla Ord</button>
-        <button class = "knap" on:click={()=>igen_markerad()}>Starta Om - Märkta Ord</button>
-    </div>
-    <div class = "No_words", class:ta_lungt = {wait}>
-        <p>Inga märkta ord</p>
-    </div>
-    <div>
-        {#each egna_glossset as gup,i}
-            <div> Glosor{i+1} </div>
+    <div class = " lisstor">
+        {#each egna_glossset as glossset,i}
+            <div> <button class = "knap" on:click={()=>choose_sett(i)}>Glosor{i+1}</button> </div>
         {/each}
     </div>
 </main>
@@ -131,9 +148,16 @@
         width: 100vw;
         display: flex;
     }
-    .fylli_svar{
+    .glossor{
+        display: flex;
         height: 100vh;
         width: 100vw;
+        align-items: center;
+        flex-direction: column;
+    }
+    .fylli_svar{
+        height: 100vh;
+        width: 80vw;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -159,7 +183,7 @@
         font-size: 120%;
     }
     .fyll_i{
-        background-color: rgb(32, 32, 32);
+        background-color: #202020;
         border-color: black;
         border-width: 3px;
         width: 25vw;
@@ -199,6 +223,12 @@
     .ta_lungt{
         display:none;
     }
+    .lisstor{
+        width: 14vw;
+    }
+    .eget{
+        width: 6vw;
+    }
     .egna{
         border-width: 3px;
         border-color: black;
@@ -216,7 +246,7 @@
     .backdrop{
         width: 100vw;
         height: 100vh;
-        background-color:rgb(36, 36, 36);
+        background-color:#242424;
         background-size: cover;
         position: fixed;
         top: 0;
